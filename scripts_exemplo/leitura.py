@@ -3,7 +3,7 @@ import time
 bloco = bytearray(10)
 
 t4 = time.perf_counter_ns()
-soma = sum(bloco)
+leitura_em_bloco = bloco[:]
 t5 = time.perf_counter_ns()
 
 read_ms = (t5 - t4) / 1_000_000

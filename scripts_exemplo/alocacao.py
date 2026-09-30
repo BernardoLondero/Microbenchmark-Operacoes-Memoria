@@ -1,6 +1,6 @@
 import time
 
-tamanho = 2056  # bytes; tamanho do bloco
+tamanho = 1024  # bytes; tamanho do bloco
 
 t0 = time.perf_counter_ns()
 bloco = bytearray(tamanho)
