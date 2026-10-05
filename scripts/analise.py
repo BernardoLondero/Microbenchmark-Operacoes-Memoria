@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # 1. Leitura do arquivo validado
-# Certifique-se de que o arquivo 'logs_combinados.csv' está na mesma pasta do script
 arquivo = 'logs/logs_combinados.csv'
 
 try:
@@ -45,8 +44,7 @@ fig.suptitle('Análise Comparativa de Desempenho de Memória', fontsize=16)
 
 # Iterar para gerar cada um dos 4 gráficos
 for ax, op, titulo in zip(axes.flatten(), operacoes, titulos):
-    # A margem de erro (sombra no gráfico) será o Desvio Padrão (errorbar='sd')
-    # É aqui que os "outliers" mostrarão a instabilidade do sistema!
+    
     sns.lineplot(
         data=df, 
         x='bloco_MB', 
@@ -62,7 +60,7 @@ for ax, op, titulo in zip(axes.flatten(), operacoes, titulos):
 
 # Ajuste visual e salvamento da imagem
 plt.tight_layout(rect=[0, 0.03, 1, 0.95])
-plt.savefig('comparativo_final.png', dpi=300)
+plt.savefig('comparativo_final.png', dpi=600)
 print("Gráfico gerado e salvo como 'comparativo_final.png'.")
 
 # Exibir os gráficos na tela

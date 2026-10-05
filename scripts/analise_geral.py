@@ -33,7 +33,7 @@ sns.lineplot(
     y='tempo_total_ms', 
     hue='sistema', 
     marker='o', 
-    errorbar='sd' # Mantém a exibição da variação (outliers) no gráfico
+    errorbar='sd'
 )
 
 # Customização de títulos e eixos
@@ -44,7 +44,7 @@ plt.legend(title='Sistema Operacional')
 
 # Ajuste visual e salvamento da imagem
 plt.tight_layout()
-plt.savefig('comparativo_tempo_total.png', dpi=300)
+plt.savefig('comparativo_tempo_total.png', dpi=600)
 print("Gráfico gerado e salvo como 'comparativo_tempo_total.png'.")
 
 # Exibir o gráfico na tela
